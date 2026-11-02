@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manga Screen Translator"
+            android:textColor="#F8FAFC"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Terjemahkan seluruh layar manga/manhwa/komik ke Bahasa Indonesia dengan 1x ketuk tombol melayang."
+            android:textColor="#94A3B8"
+            android:textSize="14sp" />
+
+        <!-- Pilih Bahasa Sumber -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#1E293B"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pilih Bahasa Asli Komik (Target: Bahasa Indonesia)"
+                android:textColor="#38BDF8"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupLang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioJapanese"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Jepang (Manga) -> Bahasa Indonesia"
+                    android:textColor="#F1F5F9"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/radioKorean"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Korea (Manhwa / Webtoon) -> Bahasa Indonesia"
+                    android:textColor="#F1F5F9"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/radioEnglish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Inggris (Comic / Manga EN) -> Bahasa Indonesia"
+                    android:textColor="#F1F5F9"
+                    android:textSize="15sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Status Kamus Offline ML Kit -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#1E293B"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvStatusModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Memeriksa model kamus terjemahan..."
+                android:textColor="#E2E8F0"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnDownloadModels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#334155"
+                android:text="Unduh / Periksa Kamus Offline (JA, KO, EN -> ID)"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Langkah Aktifkan Tombol Melayang -->
+        <Button
+            android:id="@+id/btnOverlayPermission"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#0284C7"
+            android:text="1. Berikan Izin Tombol Melayang (Overlay)"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnStartFloating"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#10B981"
+            android:text="2. Mulai Tombol Melayang Penerjemah"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnStopFloating"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#EF4444"
+            android:text="Matikan Tombol Melayang"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="4dp"
+            android:text="Cara Pakai Saat Baca Komik:&#10;• Tekan tombol 'Mulai Tombol Melayang Penerjemah' dan izinkan perekaman layar.&#10;• Buka aplikasi baca manga/komik atau browser favoritmu.&#10;• Ketuk 1x tombol melayang 'TERJEMAH' untuk langsung menerjemahkan seluruh balon teks di layar ke Bahasa Indonesia.&#10;• Ketuk di mana saja pada layar untuk menutup hasil terjemahan dan lanjut scroll halaman berikutnya."
+            android:textColor="#94A3B8"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</ScrollView>
